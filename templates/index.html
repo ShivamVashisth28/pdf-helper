@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>PDF Tools</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">PDF Tools</h1>
+            <ul class="nav-links">
+                <li><a href="#merge">Merge</a></li>
+                <li><a href="#split">Split</a></li>
+                <li><a href="#resize">Resize</a></li>
+                <li><a href="#compress">Compress</a></li>
+                <li><a href="#extract">Extract</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            <h1>PDF Tools</h1>
+            <p class="subtitle">Merge, Split, Resize, Compress, and Extract PDFs with Ease</p>
+        </header>
+
+        <!-- Tool Sections -->
+        <section id="merge" class="tool-section">
+            <h2><i class="fas fa-file-pdf"></i> Merge PDFs</h2>
+            <form action="/merge" method="POST" enctype="multipart/form-data">
+                <input type="file" name="pdfs" multiple required>
+                <button type="submit">Merge PDFs</button>
+            </form>
+        </section>
+
+        <section id="split" class="tool-section">
+            <h2><i class="fas fa-cut"></i> Split PDF</h2>
+            <form action="/split" method="POST" enctype="multipart/form-data">
+                <input type="file" name="pdf" required>
+                <input type="text" name="pages" placeholder="Pages (e.g., 1,3,5-7)" required>
+                <button type="submit">Split PDF</button>
+            </form>
+        </section>
+
+        <section id="resize" class="tool-section">
+            <h2><i class="fas fa-expand-alt"></i> Resize PDF</h2>
+            <form action="/resize" method="POST" enctype="multipart/form-data">
+                <input type="file" name="pdf" required>
+                <input type="text" name="scale" placeholder="Scale Factor (e.g., 0.5)" required>
+                <button type="submit">Resize PDF</button>
+            </form>
+        </section>
+
+        <section id="compress" class="tool-section">
+            <h2><i class="fas fa-file-archive"></i> Compress PDF</h2>
+            <form action="/compress" method="POST" enctype="multipart/form-data">
+                <input type="file" name="pdf" required>
+                <button type="submit">Compress PDF</button>
+            </form>
+        </section>
+
+        <section id="extract" class="tool-section">
+            <h2><i class="fas fa-file-alt"></i> Extract Text from PDF</h2>
+            <form action="/extract" method="POST" enctype="multipart/form-data">
+                <input type="file" name="pdf" required>
+                <button type="submit">Extract Text</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 PDF Tools. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
