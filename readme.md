@@ -2,6 +2,9 @@
 
 A Flask-based web application for performing various operations on PDF files, such as merging, splitting, resizing, compressing, and extracting text.
 
+![image](https://github.com/user-attachments/assets/99795f34-673c-4d09-9019-38581d9ad8b3)
+
+
 ## Features
 
 - **Merge PDFs**: Combine multiple PDF files into a single PDF.
